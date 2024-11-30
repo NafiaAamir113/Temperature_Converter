@@ -10,7 +10,7 @@ def fahrenheit_to_celsius(fahrenheit):
 
 # Streamlit App
 def main():
-    st.title("🌡️ Interactive Temperature Converter")
+    st.title("🌡️ Temperature Converter")
     st.write("Convert temperatures between **Celsius** and **Fahrenheit** effortlessly! 🔥❄️")
 
     # Sidebar for conversion options
