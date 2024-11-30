@@ -18,28 +18,6 @@ def main():
         "Choose the conversion direction:",
         ("Celsius to Fahrenheit", "Fahrenheit to Celsius")
     )
-    
-    # Add CSS style for customizing button color
-st.markdown(
-    """
-    <style>
-    div.stButton > button:first-child {
-        background-color: #28a745; /* Green color */
-        color: white; /* White text color */
-        border-radius: 8px; /* Optional: rounded corners */
-        border: none; /* Remove border */
-        padding: 0.5em 1em; /* Add some padding */
-        font-size: 16px; /* Optional: adjust font size */
-        cursor: pointer; /* Add pointer cursor on hover */
-    }
-    div.stButton > button:first-child:hover {
-        background-color: #218838; /* Darker green on hover */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
     # User inputs temperature
     if option == "Celsius to Fahrenheit":
         celsius = st.number_input("Enter temperature in Celsius:", format="%.2f")
