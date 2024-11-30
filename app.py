@@ -31,6 +31,8 @@ def main():
             celsius = fahrenheit_to_celsius(fahrenheit)
             st.success(f"{fahrenheit}°F is equal to {celsius:.2f}°C.")
 
+
+
 if __name__ == "__main__":
     main()
 
