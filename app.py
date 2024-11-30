@@ -38,7 +38,6 @@ st.markdown(
     div.stButton > button:first-child {
         background-color: white; /* Normal button color */
         color: black; /* Normal text color */
-        border-color: none; 
         border: 2px solid #28a745; /* Optional: green border */
         border-radius: 8px; /* Optional: rounded corners */
         padding: 0.5em 1em; /* Add some padding */
