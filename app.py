@@ -10,22 +10,16 @@ def fahrenheit_to_celsius(fahrenheit):
 
 # Streamlit App
 def main():
-    st.title("🌡️ Temperature Converter")
+    st.title("🌡️ Interactive Temperature Converter")
     st.write("Convert temperatures between **Celsius** and **Fahrenheit** effortlessly! 🔥❄️")
 
-    # Sidebar for conversion options
-    st.sidebar.header("Conversion Options")
-    reset = st.sidebar.button("🔄 Reset")  # Reset button in sidebar
-    if reset:
-        st.session_state.clear()  # Clears all session state variables
-    
     # Initialize session state for inputs
     if "conversion_option" not in st.session_state:
         st.session_state.conversion_option = "Celsius to Fahrenheit"
     if "temperature" not in st.session_state:
         st.session_state.temperature = 0.0
 
-    st.session_state.conversion_option = st.sidebar.radio(
+    st.session_state.conversion_option = st.radio(
         "Choose the conversion direction:",
         ("Celsius to Fahrenheit", "Fahrenheit to Celsius"),
         index=0 if st.session_state.conversion_option == "Celsius to Fahrenheit" else 1,
@@ -45,6 +39,7 @@ def main():
         if st.button("🌟 Convert to Fahrenheit"):
             fahrenheit = celsius_to_fahrenheit(st.session_state.temperature)
             st.success(f"✅ **{st.session_state.temperature}°C** is equal to **{fahrenheit:.2f}°F**.")
+    
     elif st.session_state.conversion_option == "Fahrenheit to Celsius":
         st.subheader("🌡️ Fahrenheit to Celsius Conversion")
         st.session_state.temperature = st.slider(
@@ -58,6 +53,25 @@ def main():
         if st.button("🌟 Convert to Celsius"):
             celsius = fahrenheit_to_celsius(st.session_state.temperature)
             st.success(f"✅ **{st.session_state.temperature}°F** is equal to **{celsius:.2f}°C**.")
+
+    # Reset button below Convert button
+    if st.button("🔄 Reset"):
+        st.session_state.temperature = 0.0  # Reset temperature input to default
+        st.session_state.conversion_option = "Celsius to Fahrenheit"  # Reset conversion option to default
+        st.experimental_rerun()  # Reset the app state
+
+    # Footer Section
+    st.markdown("---")
+    st.markdown(
+        """
+        <div style="text-align: center;">
+            <p>Created with ❤️ by [Your Name]</p>
+            <p>Check out the code on <a href="https://github.com/your-repo-url" target="_blank">GitHub</a></p>
+            <p>For inquiries, please contact us at: <a href="mailto:contact@your-email.com">contact@your-email.com</a></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Adding CSS style for customizing button hover effect
 st.markdown(
