@@ -1,2 +1,2 @@
-# Temperature_Convertor
-This repository host the code for Temperature_Converter
+# Temperature_Converter
+This repository hosts the code for Temperature_Converter.
