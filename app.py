@@ -31,21 +31,23 @@ def main():
             celsius = fahrenheit_to_celsius(fahrenheit)
             st.success(f"{fahrenheit}°F is equal to {celsius:.2f}°C.")
 
-     # Add CSS style for customizing button color
+# Adding CSS style for customizing button hover effect
 st.markdown(
     """
     <style>
     div.stButton > button:first-child {
-        background-color: #28a745; /* Green color */
-        color: white; /* White text color */
+        background-color: white; /* Normal button color */
+        color: black; /* Normal text color */
+        border: 2px solid #28a745; /* Optional: green border */
         border-radius: 8px; /* Optional: rounded corners */
-        border: none; /* Remove border */
         padding: 0.5em 1em; /* Add some padding */
         font-size: 16px; /* Optional: adjust font size */
         cursor: pointer; /* Add pointer cursor on hover */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
     }
     div.stButton > button:first-child:hover {
-        background-color: #218838; /* Darker green on hover */
+        background-color: #28a745; /* Green on hover */
+        color: white; /* White text color on hover */
     }
     </style>
     """,
