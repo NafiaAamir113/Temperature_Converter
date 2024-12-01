@@ -19,18 +19,18 @@ def main():
     if "temperature" not in st.session_state:
         st.session_state.temperature = 0.0
 
-    # Display dynamic icon based on the conversion option
-    if st.session_state.conversion_option == "Celsius to Fahrenheit":
-        st.markdown("### 🥶 Celsius to Fahrenheit Conversion")
-    elif st.session_state.conversion_option == "Fahrenheit to Celsius":
-        st.markdown("### 🌞 Fahrenheit to Celsius Conversion")
-
     # Conversion direction
     st.session_state.conversion_option = st.radio(
         "Choose the conversion direction:",
         ("Celsius to Fahrenheit", "Fahrenheit to Celsius"),
         index=0 if st.session_state.conversion_option == "Celsius to Fahrenheit" else 1,
     )
+
+    # Display dynamic icon based on the radio button selection
+    if st.session_state.conversion_option == "Celsius to Fahrenheit":
+        st.markdown("### 🥶 Celsius to Fahrenheit Conversion")
+    elif st.session_state.conversion_option == "Fahrenheit to Celsius":
+        st.markdown("### 🌞 Fahrenheit to Celsius Conversion")
 
     # Temperature input and conversion
     if st.session_state.conversion_option == "Celsius to Fahrenheit":
@@ -75,7 +75,7 @@ def main():
         <div style="text-align: center;">
             <p>Created with ❤️ by ME</p>
             <p>Check out the code on <a href="https://github.com/NafiaAamir113/Temperature_Converter" target="_blank">GitHub</a></p>
-            <p>For inquiries, please contact me at: <a href="mailto:contact@your-email.com">nafiaaamir@gmail.com</a></p>
+            <p>For inquiries, please contact me at: <a href="mailto:nafiaaamir@gmail.com">nafiaaamir@gmail.com</a></p>
         </div>
         """,
         unsafe_allow_html=True
@@ -83,4 +83,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
