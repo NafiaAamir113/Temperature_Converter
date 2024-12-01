@@ -10,7 +10,7 @@ def fahrenheit_to_celsius(fahrenheit):
 
 # Streamlit App
 def main():
-    st.title("🌡️ Interactive Temperature Converter")
+    st.title("🌡️ Temperature Converter")
     st.write("Convert temperatures between **Celsius** and **Fahrenheit** effortlessly! 🔥❄️")
 
     # Initialize session state for inputs
@@ -67,37 +67,13 @@ def main():
     st.markdown(
         """
         <div style="text-align: center;">
-            <p>Created with ❤️ by [Your Name]</p>
-            <p>Check out the code on <a href="https://github.com/your-repo-url" target="_blank">GitHub</a></p>
-            <p>For inquiries, please contact us at: <a href="mailto:contact@your-email.com">contact@your-email.com</a></p>
+            <p>Created with ❤️ by ME</p>
+            <p>Check out the code on <a href="https://github.com/NafiaAamir113/Temperature_Converter">GitHub</a></p>
+            <p>For inquiries, please contact us at: <a href="mailto:nafiaaamir55@gmail.com">contact@nafiaaamir55@gmail.com</a></p>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-# Adding CSS style for customizing button hover effect
-st.markdown(
-    """
-    <style>
-    div.stButton > button:first-child {
-        background-color: #f8f9fa; /* Light background by default */
-        color: #495057; /* Dark text color */
-        border: 2px solid #28a745; /* Green border */
-        border-radius: 8px; /* Rounded corners */
-        padding: 0.5em 1em; /* Add some padding */
-        font-size: 16px; /* Adjust font size */
-        cursor: pointer; /* Add pointer cursor on hover */
-        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-    }
-    div.stButton > button:first-child:hover {
-        background-color: #28a745; /* Green background on hover */
-        color: white; /* White text color on hover */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 if __name__ == "__main__":
     main()
-
