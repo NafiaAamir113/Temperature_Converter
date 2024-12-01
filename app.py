@@ -67,7 +67,7 @@ def main():
     st.markdown(
         """
         <div style="text-align: center;">
-            <p>Created with ❤️ by ME(NA)</p>
+            <p>Created with ❤️ by ME</p>
             <p>Check out the code on <a href="https://github.com/NafiaAamir113/Temperature_Converter">GitHub</a></p>
             <p>For inquiries, please contact me at: <a href="mailto:nafiaaamir55@gmail.com">nafiaaamir55@gmail.com</a></p>
         </div>
