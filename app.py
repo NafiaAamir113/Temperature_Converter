@@ -26,12 +26,6 @@ def main():
         index=0 if st.session_state.conversion_option == "Celsius to Fahrenheit" else 1,
     )
 
-    # Display dynamic icon based on the radio button selection
-    if st.session_state.conversion_option == "Celsius to Fahrenheit":
-        st.markdown("### 🥶 Celsius to Fahrenheit Conversion")
-    elif st.session_state.conversion_option == "Fahrenheit to Celsius":
-        st.markdown("### 🌞 Fahrenheit to Celsius Conversion")
-
     # Temperature input and conversion
     if st.session_state.conversion_option == "Celsius to Fahrenheit":
         st.subheader("🌡️ Celsius to Fahrenheit Conversion")
