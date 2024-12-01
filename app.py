@@ -1,26 +1,4 @@
-import streamlit as st
-import time
 
-# Function to convert Celsius to Fahrenheit
-def celsius_to_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
-
-# Function to convert Fahrenheit to Celsius
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5/9
-
-# Function to simulate a weather effect (Snowflakes or others)
-def snowflakes_effect():
-    st.markdown(
-        """
-        <style>
-        @keyframes snowflakes {
-            0% {top: -10%;}
-            100% {top: 100%;}
-        }
-        .snowflake {
-            position: fixed;
-            top: -10%;
             font-size: 1.5rem;
             color: white;
             z-index: 9999;
