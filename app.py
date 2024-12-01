@@ -25,6 +25,7 @@ def snowflakes_effect():
             color: white;
             z-index: 9999;
             animation: snowflakes 5s linear infinite;
+            opacity: 0.3;  /* Light snowflakes */
         }
         .snowflake:nth-child(odd) {
             animation-duration: 6s;
@@ -38,6 +39,11 @@ def snowflakes_effect():
         <div class="snowflake">❄️</div>
         <div class="snowflake">❄️</div>
         <div class="snowflake">❄️</div>
+        <div class="snowflake">❄️</div>
+        <div class="snowflake">❄️</div>
+        <div class="snowflake">❄️</div>
+        <div class="snowflake">❄️</div>
+        </div>
         """,
         unsafe_allow_html=True
     )
@@ -53,11 +59,11 @@ def main():
     if "temperature" not in st.session_state:
         st.session_state.temperature = 0.0
 
-    # Display dynamic image based on the conversion option
+    # Display dynamic icon based on the conversion option
     if st.session_state.conversion_option == "Celsius to Fahrenheit":
-        st.image("https://www.w3schools.com/w3images/snow.jpg", width=400)  # Snow image for Celsius to Fahrenheit
+        st.markdown("### 🥶 Celsius to Fahrenheit Conversion")
     elif st.session_state.conversion_option == "Fahrenheit to Celsius":
-        st.image("https://www.w3schools.com/w3images/fog.jpg", width=400)  # Fog image for Fahrenheit to Celsius
+        st.markdown("### 🌞 Fahrenheit to Celsius Conversion")
 
     # Conversion direction
     st.session_state.conversion_option = st.radio(
