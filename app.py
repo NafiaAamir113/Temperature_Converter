@@ -74,8 +74,8 @@ def main():
         """
         <div style="text-align: center;">
             <p>Created with ❤️ by ME</p>
-            <p>Check out the code on <a href="https://github.com/your-repo-url" target="_blank">GitHub</a></p>
-            <p>For inquiries, please contact us at: <a href="mailto:contact@your-email.com">contact@your-email.com</a></p>
+            <p>Check out the code on <a href="https://github.com/NafiaAamir113/Temperature_Converter" target="_blank">GitHub</a></p>
+            <p>For inquiries, please contact me at: <a href="mailto:contact@your-email.com">nafiaaamir@gmail.com</a></p>
         </div>
         """,
         unsafe_allow_html=True
