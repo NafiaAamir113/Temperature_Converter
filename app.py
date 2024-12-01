@@ -69,7 +69,7 @@ def main():
         <div style="text-align: center;">
             <p>Created with ❤️ by ME</p>
             <p>Check out the code on <a href="https://github.com/NafiaAamir113/Temperature_Converter" target="_blank">GitHub</a></p>
-            <p>For inquiries, please contact me at: <a href="mailto:nafiaaamir55@gmail.com">nafiaaamir@gmail.com</a></p>
+            <p>For inquiries, please contact me at: <a href="mailto:nafiaaamir55@gmail.com">nafiaaamir55@gmail.com</a></p>
         </div>
         """,
         unsafe_allow_html=True
